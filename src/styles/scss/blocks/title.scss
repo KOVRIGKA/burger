@@ -1,0 +1,12 @@
+.title{
+    color: $yellow;
+    font-family: Gagalin;
+    font-size: 75px;
+    margin-bottom: 15px;
+    text-align: center;
+
+    &--color-black{
+        color: black;
+        padding-bottom: 15px;
+    }
+}

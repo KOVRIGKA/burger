@@ -1,0 +1,35 @@
+.best{
+    background: url(../images/bg/best-bg.jpg) center center / cover no-repeat;
+}
+
+.best__list{
+    display: flex;
+}
+
+.best__name{
+    color: #2f3234;
+    font-family: Lifehack;
+    font-size: 24px;
+    padding-bottom: 15px;
+}
+
+.best__img{
+    margin-bottom: 30px;
+}
+
+.best__item{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.best__text{
+    text-align: center;
+}
+
+.best__disc{
+    color: #2f3234;
+    font-family: Ubuntu-Light;
+    font-size: 14px;
+}

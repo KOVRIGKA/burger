@@ -1,5 +1,4 @@
-# Стартовый проект с Gulp4
-
+# burger
 <table>
   <thead>
     <tr>
@@ -9,8 +8,8 @@
   </thead>
   <tbody>
     <tr>
-      <td><code>git clone 'url'</code></td>
-      <td>Клонировать данный репозиторий.</td>
+      <td><code>gh-pages</code></td>
+      <td>https://kovrigka.github.io/burger/</td>
     </tr>
     <tr>
       <td><code>cd path/to/</code></td>

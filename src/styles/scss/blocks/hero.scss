@@ -1,0 +1,29 @@
+.hero__text{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.hero__content{
+    display: flex;
+    align-items: center;
+}
+
+.hero__container{
+    flex:  0.75;
+}
+
+.hero{
+    background: url(../images/bg/intro-bg.jpg) center center / cover no-repeat;
+}
+
+
+
+.hero__disc{
+    color: white;
+    font-family: Lifehack;
+    font-size: 75px;
+    text-transform: lowercase;
+    line-height: 72px;
+}
+

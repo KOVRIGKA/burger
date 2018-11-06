@@ -1,0 +1,21 @@
+.btn{
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: $red;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: Ubuntu;
+
+    
+}
+
+.btn--review{
+    background: #2f3234;
+    align-self: flex-start;
+
+    &-phones{
+        display: none;
+    }
+}

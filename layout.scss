@@ -12,22 +12,13 @@ body{
     color: $black;
 }
 
-.section{
-    height: 100vh;
-    min-height: 650px;
-}
-
 .container{
     margin: 0 auto;
-    width: 940px;
+    position: relative;
+    max-width: 940px;
+    width: 95%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 100%;
-
-    &--without-align{
-        justify-content: initial;
-    }
 }
 
 .wrapper{
