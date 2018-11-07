@@ -48,10 +48,10 @@ body {
           justify-content: center;
   height: 100%; }
   .container--without-align {
-    -webkit-box-pack: initial;
-    -webkit-justify-content: initial;
-        -ms-flex-pack: initial;
-            justify-content: initial; }
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
 
 .wrapper {
   position: relative;
@@ -66,7 +66,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
+  margin: 0;
   font-weight: normal; }
 
 table {
@@ -211,7 +211,8 @@ footer {
   background: #2f3234;
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
-          align-self: flex-start; }
+          align-self: flex-start;
+  border: none; }
   .btn--review-phones {
     display: none; }
 
@@ -224,6 +225,8 @@ footer {
   .title--color-black {
     color: black;
     padding-bottom: 15px; }
+  .title-hero {
+    text-align: left; }
 
 .best {
   background: url(../images/bg/best-bg.jpg) center center/cover no-repeat; }
@@ -241,7 +244,8 @@ footer {
   padding-bottom: 15px; }
 
 .best__img {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  min-height: 95px; }
 
 .best__item {
   -webkit-box-flex: 1;
@@ -319,10 +323,13 @@ footer {
           justify-content: center;
   color: white;
   font-size: 14px;
-  padding: 0 5%;
+  padding: 0 7%;
   font-family: Ubuntu-Light;
   line-height: 24px;
-  opacity: 0; }
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
   .review__content:hover {
     opacity: 1;
     background-color: rgba(22, 22, 22, 0.7); }
@@ -333,3 +340,11 @@ footer {
 
 .review__text {
   margin-bottom: 20px; }
+
+.to-next-section {
+  margin-bottom: 30px;
+  background: transparent;
+  border: none;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center; }
