@@ -26,7 +26,7 @@ body{
     height: 100%;
 
     &--without-align{
-        justify-content: initial;
+        justify-content: space-between;
     }
 }
 
@@ -44,7 +44,7 @@ h3,
 h4,
 h5,
 h6{
-    margin-top: 0;
+    margin: 0;
     font-weight: normal;
 }
 

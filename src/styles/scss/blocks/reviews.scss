@@ -35,10 +35,11 @@
     justify-content: center;
     color: white;
     font-size: 14px;
-    padding: 0 5%;
+    padding: 0 7%;
     font-family: Ubuntu-Light;
     line-height: 24px;
     opacity: 0;
+    transition: 0.5s;
 
     &:hover{
         opacity: 1;
@@ -53,4 +54,11 @@
 
 .review__text{
     margin-bottom: 20px;
+}
+
+.to-next-section{
+    margin-bottom: 30px;
+    background: transparent;
+    border: none;
+    align-self: center;    
 }
