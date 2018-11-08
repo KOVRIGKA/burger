@@ -7,14 +7,14 @@
     text-decoration: none;
     font-size: 13px;
     font-family: Ubuntu;
-
-    
+    cursor: pointer;    
 }
 
 .btn--review{
     background: #2f3234;
     align-self: flex-start;
     border: none;
+    cursor: pointer;
 
     &-phones{
         display: none;
