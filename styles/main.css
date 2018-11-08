@@ -129,6 +129,15 @@ footer {
   text-transform: lowercase;
   line-height: 72px; }
 
+.to-next-section {
+  margin-bottom: 30px;
+  background: transparent;
+  border: none;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  cursor: pointer; }
+
 .header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -205,14 +214,16 @@ footer {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 13px;
-  font-family: Ubuntu; }
+  font-family: Ubuntu;
+  cursor: pointer; }
 
 .btn--review {
   background: #2f3234;
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
           align-self: flex-start;
-  border: none; }
+  border: none;
+  cursor: pointer; }
   .btn--review-phones {
     display: none; }
 
@@ -225,7 +236,7 @@ footer {
   .title--color-black {
     color: black;
     padding-bottom: 15px; }
-  .title-hero {
+  .title--hero {
     text-align: left; }
 
 .best {
@@ -340,11 +351,3 @@ footer {
 
 .review__text {
   margin-bottom: 20px; }
-
-.to-next-section {
-  margin-bottom: 30px;
-  background: transparent;
-  border: none;
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center; }
