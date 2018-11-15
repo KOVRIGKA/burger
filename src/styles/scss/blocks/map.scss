@@ -1,0 +1,62 @@
+.map{
+    background: url(../images/bg/map-bg.jpg) center center / cover no-repeat;
+    background-size: cover;
+	position: relative;
+}
+
+.footer{
+    background: url(../images/bg/footer-bg.jpg) center bottom no-repeat;
+    padding: 10px 0;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__adress{
+        margin-bottom: 10px;
+    }
+    
+    &__connection{
+        font-family: Ubuntu;
+        font-size: 14px;
+        color: #fff;
+    }
+
+    &__number{
+        text-decoration: none;
+        color: $red;
+    }
+}
+
+.socials__svg{
+    width: 22px;
+    height: 22px;
+    margin: 10px;
+}
+
+.footer__svg{
+    margin-right: 10px;
+    width: 13px;
+    height: 13px;
+}
+
+
+
+.svg-vk, .svg-fb, .svg-inst, .svg-twitter{
+    fill: #585858;
+}
+
+.svg-phone{
+    fill: $red;
+}
+
+.socials__list{
+    display: flex;
+}

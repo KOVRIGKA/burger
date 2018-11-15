@@ -6,11 +6,18 @@
     text-align: center;
 
     &--color-black{
-        color: black;
+        color: $black;
         padding-bottom: 15px;
     }
 
     &--hero{
         text-align: left;
+    }
+
+    &--menu{
+        color: #fff;
+        text-align: left;
+        margin-left: 7%;
+        padding-top: 7%;
     }
 }

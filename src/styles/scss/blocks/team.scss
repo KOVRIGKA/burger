@@ -1,0 +1,113 @@
+.team{
+    background: url(../images/bg/team-bg.jpg) center center / cover no-repeat;
+    background-size: cover;
+	position: relative;
+}
+
+.team__section{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    background: rgba(47, 50, 52, 0.93);
+    padding: 5% 7% 0 7%;
+}
+
+.team-acco__content {
+    display: flex;
+    margin: 20px 0;
+    height: 0;
+    overflow: hidden;
+    align-items: center;
+}
+
+.team-acco__name{
+    font-family: Gagalin;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    &:before, &:after {
+		content: "";
+		display: block;
+		//position: absolute;
+		left: 18px;
+		top: 8px;
+		width: 0;
+        height: 0;
+        margin: 7px;
+	}
+
+	&:before {
+		border-top: 7px solid $yellow;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-bottom: 0px solid transparent;
+		transition: .3s;
+	}
+
+	&:after {
+		display: none;
+		border-bottom: 7px solid $yellow;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 0px solid transparent;
+	}
+    
+}
+
+.team-acco__item {
+    margin-bottom: 40px;
+    
+      &:last-child {
+          margin-bottom: 0;
+      }
+  
+      &.is-active {
+        .team-acco__name {
+            color: $yellow;
+
+            &:before {
+                transform: rotate(-180deg);
+            }
+        }
+
+        .team-acco__content{
+            height: auto;
+        }
+    }
+  }
+
+.team-acco__img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.team-acco__pic{
+    text-align: center;
+    margin: 0 20px;
+}
+
+.team-acco__text{
+    width: 70%;
+    font-size: 14px;
+    color: #fff;
+}
+
+.team-acco__title{
+    font-family: Ubuntu;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.team-acco__text-content{
+    font-family: Ubuntu-Light;
+    font-size: 14px;
+    color: #fff;
+    line-height: 24px;
+}

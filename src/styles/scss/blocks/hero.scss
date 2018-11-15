@@ -1,6 +1,7 @@
 .hero__text{
     display: flex;
     flex-direction: column;
+    width: 50%;
     padding-left: 10px;
 }
 
@@ -15,6 +16,14 @@
 
 .hero{
     background: url(../images/bg/intro-bg.jpg) center center / cover no-repeat;
+}
+
+.hero__picture{
+    width: 50%;
+}
+
+.hero__burger{
+    max-width: 100%;
 }
 
 .hero__disc{

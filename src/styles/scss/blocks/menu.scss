@@ -1,0 +1,45 @@
+.menu{
+    background: url(../images/bg/menu-bg.jpg) center center / cover no-repeat;
+    background-size: cover;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.menu-acco{
+    position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+    display: flex;
+
+    &__name{
+        width: 80px;
+        height: 100%;
+        float: left;
+        text-decoration: none;
+        position: relative;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__name-text{
+        transform-origin: 0 0;
+        left: 50%;
+        top: 100%;
+        margin-top: -40px;
+
+        transform: rotate(-90deg) translateY(-50%);
+        font-family: Gagalin;
+        font-size: 40px;
+        text-decoration: none;
+        color: #fff;
+        white-space: nowrap;
+        position: absolute;
+    }
+
+    &__content{
+        width: 0;
+        overflow: hidden;
+    }
+}

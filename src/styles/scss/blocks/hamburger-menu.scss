@@ -1,0 +1,12 @@
+.hamburger-menu-link {
+	vertical-align: middle;
+	position: relative;
+	height: 22px;
+	align-items: center;
+	margin-left: 30px;
+    display: none;
+
+    @include tablets() {
+        display: flex;
+    }
+}
