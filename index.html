@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Burgers</title>
   <link rel="stylesheet" href="./styles/found/normalize.css">
@@ -33,6 +33,9 @@
               </ul>
             </nav>
             <a href="#" class="btn btn--red">Заказать</a>
+            <a href="#" class="hamburger-menu-link">
+              <div class="hamburger-menu-link__bars"></div>
+            </a>
           </div>
         </header>
         <div class="hero__content">
@@ -53,7 +56,9 @@
         <ul class="best__list">
           <li class="best__item">
             <div class="best__img">
-              <img src="images/icons/meat.svg" alt="" class="best__img-pic">
+              <svg class="best__svg svg-beef">
+                <use xlink:href='images/symbol/sprite.svg#meat'></use>
+              </svg>
             </div>
             <div class="best__text">
               <div class="best__name">100% свежее мясо</div>
@@ -66,7 +71,9 @@
           </li>
           <li class="best__item">
             <div class="best__img">
-              <img src="images/icons/hand.svg" alt="" class="best__img-pic">
+                <svg class="best__svg svg-hand">
+                  <use xlink:href='images/symbol/sprite.svg#hand'></use>
+                </svg>
             </div>
             <div class="best__text">
               <div class="best__name">Ручная сборка</div>
@@ -79,7 +86,9 @@
           </li>
           <li class="best__item">
             <div class="best__img">
-              <img src="images/icons/natural.svg" alt="" class="best__img-pic">
+                <svg class="best__svg svg-natural">
+                  <use xlink:href='images/symbol/sprite.svg#natural'></use>
+                </svg>
             </div>
             <div class="best__text">
               <div class="best__name">Натуральные ингредиенты</div>
@@ -87,6 +96,113 @@
                 <p>
                   Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
                 </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="team section">
+      <div class="team__section">
+        <h2 class="title">Команда</h2>
+        <ul class="team-acco">
+          <li class="team-acco__item ">
+            <a href="" class="team-acco__name">Дэниэл Редклиф</a>
+            <div class="team-acco__content">
+              <div class="team-acco__pic">
+                <div class="team-acco__img" style="background-image: url('images/content/photo-team/1.jpg') "></div>
+              </div>
+              <div class="team-acco__text">
+                <h6 class="team-acco__title">Оператор</h6>
+                <div class="team-acco__text-content">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+              </div>
+            </div>
+          </li>
+          <li class="team-acco__item is-active">
+            <a href="" class="team-acco__name">Ричард Джеймс</a>
+            <div class="team-acco__content">
+              <div class="team-acco__pic">
+                <div class="team-acco__img" style="background-image: url('images/content/photo-team/1.jpg')"></div>
+              </div>
+              <div class="team-acco__text">
+                <h6 class="team-acco__title">Оператор</h6>
+                <div class="team-acco__text-content">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+              </div>
+            </div>
+          </li>
+          <li class="team-acco__item">
+            <a href="" class="team-acco__name">Джейк Финн</a>
+            <div class="team-acco__content">
+              <div class="team-acco__pic">
+                <div class="team-acco__img" style="background-image: url('images/content/photo-team/1.jpg')"></div>
+              </div>
+              <div class="team-acco__text">
+                <h6 class="team-acco__title">Оператор</h6>
+                <div class="team-acco__text-content">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+              </div>
+            </div>
+          </li>
+          <li class="team-acco__item">
+            <a href="" class="team-acco__name">Николай Иванов</a>
+            <div class="team-acco__content">
+              <div class="team-acco__pic">
+                <div class="team-acco__img" style="background-image: url('images/content/photo-team/1.jpg')"></div>    
+              </div>
+              <div class="team-acco__text">
+                <h6 class="team-acco__title">Оператор</h6>
+                <div class="team-acco__text-content">С радостью поможет подобрать идеальный бургер и оформить заказ.  </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="menu section">
+      <div class="menu__section">
+        <h2 class="title title--menu">Меню</h2>
+        <ul class="menu-acco">
+          <li class="menu-acco__item is-active">
+            <a class="menu-acco__name" href="#" style="background-image: url('images/bg/menu-bg--1.jpg')">
+              <span class="menu-acco__name-text">Для мясоедов</span>
+            </a>
+            <div class="menu-acco__content">
+              <div class="menu-acco__text">
+                <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
+                Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+                однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
+                выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
+                стал особенно чутко относиться к слову.</p>
+              </div>
+            </div>
+          </li>
+          <li class="menu-acco__item">
+            <a class="menu-acco__name" href="#" style="background-image: url('images/bg/menu-bg--2.jpg')">
+              <span class="menu-acco__name-text">Вегетарианское</span>
+            </a>
+            <div class="menu-acco__content">
+              <div class="menu-acco__text">
+                <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
+                Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+                однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
+                выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
+                стал особенно чутко относиться к слову.</p>
+              </div>
+            </div>
+          </li>
+          <li class="menu-acco__item">
+            <a class="menu-acco__name" href="#" style="background-image: url('images/bg/menu-bg--3.jpg')">
+              <span class="menu-acco__name-text">Диетическое</span>
+            </a>
+            <div class="menu-acco__content">
+              <div class="menu-acco__text">
+                <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
+                Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+                однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
+                выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
+                стал особенно чутко относиться к слову.</p>
               </div>
             </div>
           </li>
@@ -184,6 +300,130 @@
           </div>
         </li>
       </ul>
+    </section>
+    <section class="order section">
+      <div class="container">
+        <h2 class="title">Закажите доставку</h2>
+        <div class="order__content">
+          <form class="form">
+            <div class="form__row">
+              <label for="" class="form__block">
+                <div class="form__block-title">Имя</div>
+                <input type="text" class="form__input">
+              </label>
+              <label for="" class="form__block">
+                <div class="form__block-title">Телефон</div>
+                <input type="text" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <label for="" class="form__block">
+                <div class="form__block-title">Улица</div>
+                <input type="text" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <label for="" class="form__block">
+                <div class="form__block-title">Дом</div>
+                <input type="text" class="form__input">
+              </label>
+              <label for="" class="form__block">
+                <div class="form__block-title">Корпус</div>
+                <input type="text" class="form__input">
+              </label>
+              <label for="" class="form__block">
+                <div class="form__block-title">Квартира</div>
+                <input type="text" class="form__input">
+              </label>
+              <label for="" class="form__block">
+                <div class="form__block-title">Этаж</div>
+                <input type="text" class="form__input">
+              </label>
+            </div>
+          </form>  
+          <form class="form">
+            <div class="form__row">
+              <div class="form__textarea">
+                <div class="form__block-title">Комментарии</div>
+                <textarea id="comments" class="form__input" rows="6"></textarea>
+              </div>
+            </div>
+            <div class="form__row">
+              <label class="form__radio">
+                <input type="radio" name="pay" class="form__radio-elem">
+                <div class="form__radio-fake"></div>
+                <div class="form__radio-title">Потребуется сдача</div>
+              </label>
+              <label class="form__radio">
+                <input type="radio" name="pay" class="form__radio-elem" checked>
+                <div class="form__radio-fake"></div>
+                <div class="form__radio-title">Оплата по карте</div>
+              </label>
+            </div>
+            <div class="form__row">
+              <label class="form__radio">
+                <div class="form__sequare-fake"></div>
+                <div class="form__radio-title">Не перезванивать</div>
+              </label>
+            </div>
+            <div class="form__row">
+              <a href="#" class="btn btn--red btn--red--order">Заказать</a>
+              <div class="form__block-title">Очистить</div>
+            </div>
+          </form>  
+        </div>
+      </div>
+    </section>
+    <section class="map section">
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__row">
+            <div class="footer__connection">
+              <div class="footer__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+              <div class="footer__phone">
+                <svg class="footer__svg svg-phone">
+                  <use xlink:href='images/symbol/sprite.svg#phone'></use>
+                </svg>
+                <a href="+78123771377" class="footer__number">+7 (812) 377-13-77</a>
+              </div>
+            </div>
+            <div class="footer__contacts">
+              <div class="socials">
+                <ul class="socials__list">
+                  <li class="socials__item">
+                    <a href="" class="socials__link">
+                      <svg class="socials__svg svg-vk">
+                        <use xlink:href='images/symbol/sprite.svg#vk'></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a href="" class="socials__link">
+                      <svg class="socials__svg svg-fb">
+                        <use xlink:href='images/symbol/sprite.svg#fb'></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a href="" class="socials__link">
+                      <svg class="socials__svg svg-inst">
+                        <use xlink:href='images/symbol/sprite.svg#inst'></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a href="" class="socials__link">
+                      <svg class="socials__svg svg-twitter">
+                        <use xlink:href='images/symbol/sprite.svg#twitter'></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </section>
   </div>
 </div>
