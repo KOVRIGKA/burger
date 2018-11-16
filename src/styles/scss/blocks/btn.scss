@@ -19,8 +19,14 @@
     align-self: flex-start;
     border: none;
     cursor: pointer;
+    @include phones {
+        display: none;
+    }
 
     &-phones{
         display: none;
+        @include phones {
+            display: block;
+        }
     }
 }

@@ -12,6 +12,10 @@
     left: 50%;
     background: rgba(47, 50, 52, 0.93);
     padding: 5% 7% 0 7%;
+    @include tablets {
+        width: 100%;
+        padding: 0;
+    }
 }
 
 .team-acco__content {

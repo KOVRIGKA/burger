@@ -5,41 +5,76 @@
     justify-content: flex-end;
 }
 
-.menu-acco{
-    position: absolute;
-	right: 0;
-	top: 0;
-	bottom: 0;
+.menu__section{
     display: flex;
+}
+
+.menu-acco{
+    display: flex;
+    z-index: 1;
+    transition: transform .8s;
+    height: 730px;
+    position: absolute;
+    right: 0;
+    
 
     &__name{
-        width: 80px;
-        height: 100%;
-        float: left;
+        display: flex;
+        align-items: flex-end;
+        width: 5rem;
         text-decoration: none;
-        position: relative;
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
+        @include tablets {
+            width: 4rem;
+        }
     }
 
     &__name-text{
-        transform-origin: 0 0;
-        left: 50%;
-        top: 100%;
-        margin-top: -40px;
-
-        transform: rotate(-90deg) translateY(-50%);
-        font-family: Gagalin;
-        font-size: 40px;
-        text-decoration: none;
-        color: #fff;
+        font-size: 35px;
         white-space: nowrap;
-        position: absolute;
+        width: 100%;
+        margin-bottom: 5rem;
+        font-family: Gagalin;
+        color: #fff;
+        text-decoration: none;
+        transform: rotate(-90deg);
+        @include tablets {
+            font-size: 30px;
+        }
     }
 
     &__content{
         width: 0;
         overflow: hidden;
+        background-color: rgba($black, .93);
+        transition: width 0.8s;
+    }
+
+    &__text{
+        line-height: 1.8;
+        padding: 4rem 2rem;
+        opacity: 0;
+        color: #fff;
+        font-family: Ubuntu-Light;
+
+    }
+
+    &__item{
+        display: flex;
+        &.is-active {
+            .menu-acco__name-text {
+                color: $yellow;
+            }
+            .menu-acco__text {
+                opacity: 1;
+                transition: opacity 0.3s;
+                transition-delay: 0.7s
+            }
+            .menu-acco__content {
+                width: 520px;
+            }
+        }
     }
 }

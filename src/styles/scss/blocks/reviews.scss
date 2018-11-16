@@ -11,6 +11,10 @@
 .reviews__item{
     height: 50%;
     width: 25%;
+    @include tablets {
+        width: 50%;
+        height: 25%;
+    }
 }
 
 .review{
@@ -40,6 +44,9 @@
     line-height: 24px;
     opacity: 0;
     transition: 0.5s;
+    @include tablets {
+        align-items: center;
+    }
 
     &:hover{
         opacity: 1;
@@ -50,9 +57,20 @@
 .review__name{
     font-size: 14px;
     font-family: Gagalin;
+    @include phones {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
 }
 
 .review__text{
     margin-bottom: 20px;
+    @include tablets {
+        text-align: center;
+      }
+      @include phones {
+        display: none;
+      }
 }
 
