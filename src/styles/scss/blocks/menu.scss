@@ -13,9 +13,11 @@
     display: flex;
     z-index: 1;
     transition: transform .8s;
-    height: 730px;
+    height: 100%;
     position: absolute;
     right: 0;
+    bottom: 0;
+    top: 0;
     
 
     &__name{

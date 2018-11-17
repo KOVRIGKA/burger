@@ -3,6 +3,10 @@
     flex-direction: column;
     width: 50%;
     padding-left: 10px;
+    @include tablets {
+        width: 100%;
+        align-items: center;
+    }
 }
 
 .hero__content{
@@ -26,6 +30,9 @@
 
 .hero__picture{
     width: 50%;
+    @include tablets {
+        width: 70%;
+    }
 }
 
 .hero__burger{
@@ -38,6 +45,9 @@
     font-size: 75px;
     text-transform: lowercase;
     line-height: 72px;
+    @include tablets {
+        font-size: 65px;            
+    }
 }
 
 .to-next-section{

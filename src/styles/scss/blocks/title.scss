@@ -12,6 +12,9 @@
 
     &--hero{
         text-align: left;
+        @include tablets {
+            font-size: 65px;            
+        }
     }
 
     &--menu{
