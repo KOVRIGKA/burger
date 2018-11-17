@@ -62,7 +62,8 @@ body {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    width: 95%; }
 
 .wrapper {
   position: relative;
@@ -112,6 +113,13 @@ footer {
           flex-direction: column;
   width: 50%;
   padding-left: 0.625rem; }
+  @media (max-width: 768px) {
+    .hero__text {
+      width: 100%;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; } }
 
 .hero__content {
   display: -webkit-box;
@@ -147,6 +155,9 @@ footer {
 
 .hero__picture {
   width: 50%; }
+  @media (max-width: 768px) {
+    .hero__picture {
+      width: 70%; } }
 
 .hero__burger {
   max-width: 100%; }
@@ -157,6 +168,9 @@ footer {
   font-size: 4.6875rem;
   text-transform: lowercase;
   line-height: 4.5rem; }
+  @media (max-width: 768px) {
+    .hero__disc {
+      font-size: 4.0625rem; } }
 
 .to-next-section {
   margin-bottom: 1.875rem;
@@ -208,7 +222,10 @@ footer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
 
 .nav__item:last-child .nav__link:after {
   display: none; }
@@ -248,6 +265,9 @@ footer {
   font-size: 0.8125rem;
   font-family: Ubuntu;
   cursor: pointer; }
+  @media (max-width: 768px) {
+    .btn--red {
+      margin-right: 3.125rem; } }
   .btn--red--order {
     margin-right: 1.25rem; }
 
@@ -258,6 +278,11 @@ footer {
           align-self: flex-start;
   border: none;
   cursor: pointer; }
+  @media (max-width: 768px) {
+    .btn--review {
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center; } }
   @media (max-width: 480px) {
     .btn--review {
       display: none; } }
@@ -265,6 +290,9 @@ footer {
     display: none; }
     @media (max-width: 480px) {
       .btn--review-phones {
+        -webkit-align-self: center;
+            -ms-flex-item-align: center;
+                align-self: center;
         display: block; } }
 
 .title {
@@ -278,6 +306,9 @@ footer {
     padding-bottom: 0.9375rem; }
   .title--hero {
     text-align: left; }
+    @media (max-width: 768px) {
+      .title--hero {
+        font-size: 4.0625rem; } }
   .title--menu {
     color: #fff;
     text-align: left;
@@ -690,9 +721,11 @@ footer {
   -o-transition: transform .8s;
   transition: transform .8s;
   transition: transform .8s, -webkit-transform .8s;
-  height: 45.625rem;
+  height: 100%;
   position: absolute;
-  right: 0; }
+  right: 0;
+  bottom: 0;
+  top: 0; }
   .menu-acco__name {
     display: -webkit-box;
     display: -webkit-flex;
