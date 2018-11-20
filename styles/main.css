@@ -511,6 +511,10 @@ footer {
       margin-left: 0; } }
   @media (max-width: 480px) {
     .form__buttons {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
@@ -744,6 +748,21 @@ footer {
   width: 70%;
   font-size: 0.875rem;
   color: #fff; }
+  @media (max-width: 768px) {
+    .team-acco__text {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; } }
 
 .team-acco__title {
   font-family: Ubuntu;
@@ -756,7 +775,7 @@ footer {
   color: #fff;
   line-height: 1.5rem; }
 
-.taem__acco {
+.team__acco {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -903,6 +922,21 @@ footer {
     font-family: Ubuntu;
     font-size: 0.875rem;
     color: #fff; }
+    @media (max-width: 480px) {
+      .footer__connection {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; } }
   .footer__number {
     text-decoration: none;
     color: #e35028; }
