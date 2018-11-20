@@ -73,9 +73,9 @@
 
 .team-acco__item {
     margin-bottom: 40px;
-    display: flex;
 
     @include tablets {
+        display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 0px;    
