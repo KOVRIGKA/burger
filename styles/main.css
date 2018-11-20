@@ -491,6 +491,9 @@ footer {
             -ms-flex-direction: column;
                 flex-direction: column;
         padding: 0 3%; } }
+  .order__check {
+    height: 0.75rem;
+    width: 0.75rem; }
 
 .form {
   display: -webkit-box;
