@@ -705,13 +705,13 @@ footer {
     border-top: 0px solid transparent; }
 
 .team-acco__item {
-  margin-bottom: 2.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+  margin-bottom: 2.5rem; }
   @media (max-width: 768px) {
     .team-acco__item {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
