@@ -118,6 +118,11 @@
     width: 70%;
     font-size: 14px;
     color: #fff;
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .team-acco__title{
@@ -134,7 +139,7 @@
     
 }
 
-.taem__acco{
+.team__acco{
     align-items: center;
 
 }

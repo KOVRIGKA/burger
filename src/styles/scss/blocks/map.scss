@@ -35,6 +35,11 @@
         font-family: Ubuntu;
         font-size: 14px;
         color: #fff;
+        @include phones {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__number{
