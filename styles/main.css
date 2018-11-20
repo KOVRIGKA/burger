@@ -41,7 +41,7 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 100%;
+  width: 95%;
   max-width: 58.75rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -528,6 +528,15 @@ footer {
           -ms-flex-align: center;
               align-items: center;
       margin-left: 0; } }
+  .form__checkbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .form__column {
     color: #fff;
     -webkit-box-flex: 1;
@@ -546,6 +555,11 @@ footer {
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 1.25rem; }
+    .form__row__check {
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
     .form__row__delete {
       -webkit-box-align: center;
       -webkit-align-items: center;
@@ -626,6 +640,45 @@ footer {
     margin-right: 0.625rem;
     position: relative; }
 
+.form__checkbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1rem; }
+
+.form__checkbox-input {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+
+.form__checkbox-fake {
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  position: relative;
+  margin-right: 0.625rem; }
+
+.form__checkbox-input:checked + .form__checkbox-fake::before {
+  content: '';
+  background: url("../images/svgicons/check.svg") 50% no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  width: 0.6875rem;
+  height: 0.5625rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
 .team {
   background: url(../images/bg/team-bg.jpg) center center/cover no-repeat;
   -webkit-background-size: cover;
@@ -642,8 +695,7 @@ footer {
   padding: 5% 7% 0 7%; }
   @media (max-width: 768px) {
     .team__section {
-      left: 0;
-      padding: 0; } }
+      left: 0; } }
 
 .team-acco__content {
   display: -webkit-box;
@@ -777,6 +829,9 @@ footer {
   font-size: 0.875rem;
   color: #fff;
   line-height: 1.5rem; }
+  @media (max-width: 768px) {
+    .team-acco__text-content {
+      text-align: center; } }
 
 .team__acco {
   -webkit-box-align: center;
@@ -966,6 +1021,9 @@ footer {
   display: -ms-flexbox;
   display: flex; }
 
+.socials__link {
+  display: block; }
+
 .nav-mobile {
   position: fixed;
   display: -webkit-box;
@@ -1052,36 +1110,41 @@ footer {
   .nav-points__item {
     margin-bottom: 5px; }
   .nav-points__link {
+    width: 1rem;
+    height: 1rem;
     display: block;
     position: relative; }
     .nav-points__link::after, .nav-points__link::before {
       content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
       -webkit-border-radius: 50%;
               border-radius: 50%; }
     .nav-points__link::after {
+      width: 6px;
+      height: 6px;
       background-color: #fff; }
     .nav-points__link::before {
+      width: 0;
+      height: 0;
       border: 1px solid #fff;
       opacity: 0;
       -webkit-transition: 0.2s;
       -o-transition: 0.2s;
       transition: 0.2s; }
-    .nav-points__link:hover::before {
+    .nav-points__link:hover::before, .nav-points__item.is-active .nav-points__link::before {
+      width: 14Px;
+      height: 14Px;
       opacity: 1; }
 
-/*.nav-points__item {
-    &.is-active {
-      .nav-points__link {
-        &::before {
-          //@extend .nav-points__link:hover::before;
-        }
-      }
-    }
-}*/
 .nav-trigger {
   display: none;
   position: fixed;
-  top: 1.8125rem;
+  top: 2.5rem;
   right: 1.75rem;
   z-index: 999; }
   @media (max-width: 768px) {
