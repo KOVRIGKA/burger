@@ -137,6 +137,10 @@
         font-family: Ubuntu-Light;
         font-size: 14px;
         cursor: pointer;
+
+        &--buttons {
+            margin-bottom: 0;
+        }
     }
 
     &__radio-title{
