@@ -13,6 +13,7 @@
     .logo {
       display: none;
     }
+
     &.is-active {
       top: 0;
       bottom: 0;
@@ -29,28 +30,36 @@
         z-index: 999;
       }
     }
+
     &__list {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     &__item {
       display: flex;
       flex-direction: column;
       align-items: center;
+
       &::after {
         content: "";
-       @include circle(5px, $white);
+        @include circle(5px, #fff);
         margin: 1rem 0;
       }
+
       &:last-child::after {
         display: none;
       }
     }
+
     &__link {
       font-size: 22px;
       padding: 4px;
       text-transform: uppercase;
+      font-family: Ubuntu-Light;
+      color: #fff;
+      text-decoration: none;
     }
   }
   

@@ -1,8 +1,8 @@
 function mobileMenu(){
-    const navTrigger = document querySelector('.nav-trigger');
-    const trigger = document querySelector('.nav-trigger__link');
-    const navMobile = document querySelector('.nav-mobile');
-    const navItems = document querySelectorAll('.nav-mobile__item');
+    const navTrigger = document.querySelector('.nav-trigger');
+    const trigger = document.querySelector('.nav-trigger__link');
+    const navMobile = document.querySelector('.nav-mobile');
+    const navItems = document.querySelectorAll('.nav-mobile__item');
 
     trigger.addEventListener('click', toggleClass);
 
@@ -11,7 +11,7 @@ function mobileMenu(){
     }
 
     function toggleClass(e){
-        e.preveventDefault();
+        e.preventDefault();
         navTrigger.classList.toggle('is-active');
         navMobile.classList.toggle('is-active');
     }

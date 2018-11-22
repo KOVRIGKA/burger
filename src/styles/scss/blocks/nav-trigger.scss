@@ -5,7 +5,6 @@
     right: 28px;
     z-index: 999;
     @include tablets {
-      top: 42px;
       display: block;
     }
     @include phones {
