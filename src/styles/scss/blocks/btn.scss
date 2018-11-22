@@ -7,6 +7,7 @@
     text-decoration: none;
     font-size: 13px;
     font-family: Ubuntu;
+    border: none;
     cursor: pointer; 
 
     &--red{
@@ -18,6 +19,16 @@
     &--red--order{
         margin-right: 20px;
     }
+
+    &--order{
+        background: transparent;
+        text-transform: none;
+        padding-left: 0;
+    }
+}
+
+.btn--red:hover{
+    background-color: darken($color: $red, $amount: 30%);
 }
 
 .btn--review{
@@ -39,4 +50,8 @@
             display: block;
         }
     }
+}
+
+.btn--review:hover{
+    background-color: darken($color: #2f3234, $amount: 30%);
 }

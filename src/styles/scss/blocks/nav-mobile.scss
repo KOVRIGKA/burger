@@ -40,7 +40,7 @@
       align-items: center;
       &::after {
         content: "";
-       // @include circle(5px, $white);
+       @include circle(5px, $white);
         margin: 1rem 0;
       }
       &:last-child::after {
