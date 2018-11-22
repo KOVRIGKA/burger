@@ -264,12 +264,20 @@ footer {
   text-decoration: none;
   font-size: 0.8125rem;
   font-family: Ubuntu;
+  border: none;
   cursor: pointer; }
   @media (max-width: 768px) {
     .btn--red {
       margin-right: 3.125rem; } }
   .btn--red--order {
     margin-right: 1.25rem; }
+  .btn--order {
+    background: transparent;
+    text-transform: none;
+    padding-left: 0; }
+
+.btn--red:hover {
+  background-color: #65200d; }
 
 .btn--review {
   background: #2f3234;
@@ -294,6 +302,9 @@ footer {
             -ms-flex-item-align: center;
                 align-self: center;
         display: block; } }
+
+.btn--review:hover {
+  background-color: black; }
 
 .title {
   color: #f9b43b;
@@ -569,10 +580,10 @@ footer {
           -ms-flex-align: center;
               align-items: center; }
     .form__row__delete {
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center; }
+      -webkit-box-align: baseline;
+      -webkit-align-items: baseline;
+          -ms-flex-align: baseline;
+              align-items: baseline; }
   .form__block {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -1034,6 +1045,9 @@ footer {
 .socials__link {
   display: block; }
 
+.svg-vk:hover, .svg-fb:hover, .svg-inst:hover, .svg-twitter:hover {
+  fill: #fff; }
+
 .nav-mobile {
   position: fixed;
   display: -webkit-box;
@@ -1159,6 +1173,11 @@ footer {
   z-index: 999; }
   @media (max-width: 768px) {
     .nav-trigger {
+      top: 2.625rem;
+      display: block; } }
+  @media (max-width: 480px) {
+    .nav-trigger {
+      top: 3rem;
       display: block; } }
   .nav-trigger__link {
     display: block;
