@@ -13,15 +13,15 @@
     position: relative;
     width: 100%;
     height: 100%;
-    //left: -100%;
-   // transform: translateX(-100%);
-    /*&.is-reverse{
+    left: -100%;
+    transform: translateX(-100%);
+    &.is-reverse{
         transform: translateX(100%);
     }
     &.is-move{
         transform: none;
         transition: transform 1s;
-    }*/
+    }
 }
 
 .slider__item{
@@ -29,8 +29,8 @@
     width: 100%;
     height: 100%;
     flex: 1 0 100%;
-    //order: 2;
-    /*&.is-one{
+    order: 2;
+    &.is-one{
         order: 1;
-    }*/
+    }
 }
