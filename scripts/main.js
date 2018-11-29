@@ -75,27 +75,44 @@ function mySlider() {
 
 mySlider();
 
-/*function accordeonTeam(){
+function accordeonTeam(){
 
-    const workers = document.querySelectorAll(".team__acco__item");
-    const teamAccord = document.querySelector(".team__acco");
+    const workers = document.querySelectorAll(".team-acco__item");
+    const teamAccord = document.querySelector(".team-acco");
+
+    console.log();
+    
 
     teamAccord.addEventListener('click', event => {
-        
+        event.preventDefault();        
         const target = event.target;
 
-        if (target.classList.contains("team__acco__name")) {
+        if (target.classList.contains("team-acco__name")) {
             const worker = target.parentNode;
-            const content = target.nextElementsSibling;
+            const content = target.nextElementSibling;            
             const contentHeight = content.firstElementChild.clientHeight;
 
-            worker.classList.add('is-active');
-            content.style.height = contentHeight + 'px';
+            for (const iterator of workers) {
+                if (iterator !== worker) {
+                    iterator.classList.remove('is-active');
+                    iterator.lastElementChild.style.height = 0;
+                }
+            }
+
+            if (worker.classList.contains('is-active')) {
+                worker.classList.remove('is-active');
+                content.style.height = 0;
+            } else {
+                worker.classList.add('is-active');
+                content.style.height = contentHeight + 'px';
+            }
+
+            
         }
     })
 }
 
-accordeonTeam();*/
+accordeonTeam();
 
 function accordeonMenu(){
     const menuItems = document.querySelectorAll('.menu-acco__item');
@@ -104,21 +121,23 @@ function accordeonMenu(){
     menuAccord.addEventListener('click', event => {
         event.preventDefault();
         let target = event.target.parentNode;
-        let content = target.nextElementsSibling; 
+        let content = target.nextElementSibling; 
         let item = target.parentNode;
 
-        const tarWidth = item.contentWidth;
+        const tarWidth = target.clientWidth;
         const windowWidth = document.documentElement.clientWidth;
         const layoutContentWidth = 520;
         const breackpointPhone = 480;
         const closeMenuWidth = tarWidth * menuItems.length;
         const openMenuWidth = closeMenuWidth + layoutContentWidth;
+        
+
 
         if (event.target.classList.contains('menu-acco__name-text')) {
             moveMenu();
         }
         target = event.target
-        content = target.nextElementsSibling
+        content = target.nextElementSibling
         item = target.parentNode
         
         if (target.classList.contains('menu-acco__name')) {
@@ -139,8 +158,9 @@ function accordeonMenu(){
                 content.style.width = 0;
             } else{
                 item.classList.add('is-active');
-                content.style.width = layoutContentWidth + 'px';
+                
                 if (windowWidth > breackpointPhone && windowWidth < openMenuWidth) {
+
                     content.style.width = windowWidth - closeMenuWidth + 'px';
                 } else if (windowWidth <= breackpointPhone) {
                 let num;

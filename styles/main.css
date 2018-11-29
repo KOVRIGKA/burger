@@ -724,6 +724,9 @@ footer {
   display: flex;
   margin: 1.25rem 0;
   height: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   overflow: hidden;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -745,25 +748,7 @@ footer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
-  margin: 1.25rem 0;
-  height: 0;
-  overflow: hidden;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  @media (max-width: 768px) {
-    .worker__content-wrapp {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center; } }
+  display: flex; }
 
 .team-acco__name {
   font-family: Gagalin;
@@ -975,8 +960,6 @@ footer {
       -webkit-transition-delay: 0.7s;
            -o-transition-delay: 0.7s;
               transition-delay: 0.7s; }
-    .menu-acco__item.is-active .menu-acco__content {
-      width: 32.5rem; }
 
 .map {
   background: url(../images/bg/map-bg.jpg) center center/cover no-repeat;
