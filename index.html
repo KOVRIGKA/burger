@@ -349,6 +349,7 @@
               <div class="review__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
               <button class="btn btn--review">Подробнее</button>
               <button class="btn btn--review btn--review-phones">Читать отзыв</button>
+              
             </div>
           </div>
         </li>
@@ -360,6 +361,7 @@
               <div class="review__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
               <button class="btn btn--review">Подробнее</button>
               <button class="btn btn--review btn--review-phones">Читать отзыв</button>
+              
             </div>
           </div>
         </li>
@@ -370,7 +372,7 @@
               <h5 class="review__name">Константин Спилберг</h5>
               <div class="review__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
               <button class="btn btn--review">Подробнее</button>
-              <button class="btn btn--review btn--review-phones">Читать отзыв</button>
+              <button class="btn btn--review btn--review-phones" id="openOverlay">Читать отзыв</button>
             </div>
           </div>
         </li>
@@ -381,7 +383,7 @@
               <h5 class="review__name">Константин Спилберг</h5>
               <div class="review__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
               <button class="btn btn--review">Подробнее</button>
-              <button class="btn btn--review btn--review-phones">Читать отзыв</button>
+              <button class="btn btn--review btn--review-phones" id="openOverlay">Читать отзыв</button>
             </div>
           </div>
         </li>
@@ -392,7 +394,7 @@
               <h5 class="review__name">Константин Спилберг</h5>
               <div class="review__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
               <button class="btn btn--review">Подробнее</button>
-              <button class="btn btn--review btn--review-phones">Читать отзыв</button>
+              <button class="btn btn--review btn--review-phones" id="openOverlay">Читать отзыв</button>
             </div>
           </div>
         </li>
@@ -403,7 +405,7 @@
               <h5 class="review__name">Константин Спилберг</h5>
               <div class="review__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
               <button class="btn btn--review">Подробнее</button>
-              <button class="btn btn--review btn--review-phones">Читать отзыв</button>
+              <button class="btn btn--review btn--review-phones" id="openOverlay">Читать отзыв</button>
             </div>
           </div>
         </li>
@@ -414,7 +416,7 @@
               <h5 class="review__name">Константин Спилберг</h5>
               <div class="review__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
               <button class="btn btn--review">Подробнее</button>
-              <button class="btn btn--review btn--review-phones">Читать отзыв</button>
+              <button class="btn btn--review btn--review-phones" id="openOverlay">Читать отзыв</button>
             </div>
           </div>
         </li>
@@ -425,7 +427,7 @@
               <h5 class="review__name">Константин Спилберг</h5>
               <div class="review__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
               <button class="btn btn--review">Подробнее</button>
-              <button class="btn btn--review btn--review-phones">Читать отзыв</button>
+              <button class="btn btn--review btn--review-phones" id="openOverlay">Читать отзыв</button>
             </div>
           </div>
         </li>
@@ -435,72 +437,72 @@
       <div class="container">
         <h2 class="title">Закажите доставку</h2>
         <div class="order__content">
-          <form class="form">
+          <form class="form" id="myForm">
             <div class="form__column">
               <div class="form__row">
                 <label for="" class="form__block">
-                  <div class="form__block-title">Имя</div>
-                  <input type="text" class="form__input">
+                  <div class="form__block-title" >Имя</div>
+                  <input type="text" class="form__input" name="name">
                 </label>
                 <label for="" class="form__block">
-                  <div class="form__block-title">Телефон</div>
-                  <input type="text" class="form__input">
-                </label>
-              </div>
-              <div class="form__row">
-                <label for="" class="form__block">
-                  <div class="form__block-title">Улица</div>
-                  <input type="text" class="form__input">
+                  <div class="form__block-title" >Телефон</div>
+                  <input type="text" class="form__input" name="tel">
                 </label>
               </div>
               <div class="form__row">
                 <label for="" class="form__block">
-                  <div class="form__block-title">Дом</div>
-                  <input type="text" class="form__input">
+                  <div class="form__block-title" >Улица</div>
+                  <input type="text" class="form__input" name="street">
+                </label>
+              </div>
+              <div class="form__row">
+                <label for="" class="form__block">
+                  <div class="form__block-title" >Дом</div>
+                  <input type="text" class="form__input" name="house">
                 </label>
                 <label for="" class="form__block">
-                  <div class="form__block-title">Корпус</div>
-                  <input type="text" class="form__input">
+                  <div class="form__block-title" >Корпус</div>
+                  <input type="text" class="form__input" name="housing">
                 </label>
                 <label for="" class="form__block">
-                  <div class="form__block-title">Квартира</div>
-                  <input type="text" class="form__input">
+                  <div class="form__block-title" >Квартира</div>
+                  <input type="text" class="form__input" name="apartment">
                 </label>
                 <label for="" class="form__block">
-                  <div class="form__block-title">Этаж</div>
-                  <input type="text" class="form__input">
+                  <div class="form__block-title" >Этаж</div>
+                  <input type="text" class="form__input" name="floor">
                 </label>
               </div>
             </div>
             <div class="form__column">
               <div class="form__row">
                 <div class="form__textarea">
-                  <div class="form__block-title">Комментарии</div>
-                  <textarea id="comments" class="form__input" rows="6"></textarea>
+                  <div class="form__block-title" >Комментарии</div>
+                  <textarea id="comments" class="form__input" rows="6" name="comment"></textarea>
                 </div>
               </div>
               <div class="form__buttons">
                 <div class="form__row">
                   <label class="form__radio">
-                    <input type="radio" name="pay" class="form__radio-elem">
+                    <input type="radio" name="pay" class="form__radio-elem" >
                     <div class="form__radio-fake"></div>
-                    <div class="form__radio-title">Потребуется сдача</div>
+                    <div class="form__radio-title" >Потребуется сдача</div>
                   </label>
                   <label class="form__radio">
-                    <input type="radio" name="pay" class="form__radio-elem" checked>
+                    <input type="radio" name="pay" class="form__radio-elem"  checked>
                     <div class="form__radio-fake"></div>
                     <div class="form__radio-title">Оплата по карте</div>
                   </label>
                 </div>
                 <div class="form__row form__row__check">
                   <label class="form__checkbox">
-                    <input type="checkbox" name="callback" class="form__checkbox-input" value="1">
+                    <input type="checkbox" name="callback" class="form__checkbox-input" value="1" >
                     <div class="form__checkbox-fake"></div>
                     <span class="form__block-title form__block-title--buttons">Не перезванивать</span>
                   </label>
                 </div>
                 <div class="form__row form__row__delete">
-                  <button class="btn btn--red">Заказать</button>
+                  <button class="btn btn--red" name="sendButton">Заказать</button>
                   <button type="reset" class="btn btn--order form__block-title">Очистить</button>
                 </div>
               </div>
@@ -510,6 +512,11 @@
       </div>
     </section>
     <section class="map section">
+      <div id="mymap" class="mymap">
+
+      </div>
+      
+      
       <footer class="footer">
         <div class="container">
           <div class="footer__row">
@@ -633,6 +640,24 @@
     </a>
   </div>
 </div>
+
+
+
+<script type="template" id="overlayTemplate">
+  <div class="overlay">
+    <div class="details__container">
+      <a class="details__close" href="#">x</a>
+      <div class="details__content">
+        <div class="details__head"></div>
+        <div class="details__text"></div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=db1817ab-4f82-4853-a8c7-96a3084f9042&lang=ru_RU"
+  type="text/javascript">
+  </script>
 
 <script src="scripts/main.js"></script>
 
