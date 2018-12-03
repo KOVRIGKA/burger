@@ -13,8 +13,8 @@
 <body>
 
 <div class="wrapper">
-  <div class="maincontent">
-    <section class="hero section">
+  <div class="maincontent" style="transform: translateY(0%);">
+    <section class="section hero is-active">
       <div class="container container--without-align">
         <header class="header">
           <div class="logo">
@@ -50,7 +50,7 @@
         <button class="to-next-section"><img src="images/icons/arrow-scroll.svg" alt="" class="arrow"></button>
       </div>
     </section>
-    <section class="best section">
+    <section class="section best">
       <div class="container">
         <h2 class="title title--color-black">Мы лучшие</h2>
         <ul class="best__list">
@@ -102,7 +102,7 @@
         </ul>
       </div>
     </section>
-    <section class="burgers section">
+    <section class="section burgers">
       <div class="container container--center">
         <div class="slider">
           <div class="slider__controls">
@@ -118,7 +118,7 @@
             </button>
           </div>
           <div class="slider__frame">
-            <ul class="slider__list">
+            <ul class="slider__list is-move">
               <li class="slider__item">
                 <div class="burger">
                   <div class="burger__photo">
@@ -224,7 +224,7 @@
         </div>
       </div>
     </section>
-    <section class="team section">
+    <section class="section team">
       <div class="team__section">
         <h2 class="title">Команда</h2>
         <ul class="team-acco">
@@ -287,7 +287,7 @@
         </ul>
       </div>
     </section>
-    <section class="menu section">
+    <section class="section menu">
       <div class="menu__section">
         <h2 class="title title--menu">Меню</h2>
         <ul class="menu-acco">
@@ -339,7 +339,7 @@
         </ul>
       </div>
     </section>
-    <section class="reviews section">
+    <section class="section reviews">
       <ul class="reviews__list">
         <li class="reviews__item">
           <div class="review">
@@ -433,11 +433,11 @@
         </li>
       </ul>
     </section>
-    <section class="order section">
+    <section class="section order">
       <div class="container">
         <h2 class="title">Закажите доставку</h2>
         <div class="order__content">
-          <form class="form" id="myForm">
+          <form class="form" id="myForm" method="POST" action="https://webdev-api.loftschool.com/sendmail">
             <div class="form__column">
               <div class="form__row">
                 <label for="" class="form__block">
@@ -446,7 +446,7 @@
                 </label>
                 <label for="" class="form__block">
                   <div class="form__block-title" >Телефон</div>
-                  <input type="text" class="form__input" name="tel">
+                  <input type="text" class="form__input" name="phone">
                 </label>
               </div>
               <div class="form__row">
@@ -502,7 +502,7 @@
                   </label>
                 </div>
                 <div class="form__row form__row__delete">
-                  <button class="btn btn--red" name="sendButton">Заказать</button>
+                  <button class="btn btn--red" id="sendButton">Заказать</button>
                   <button type="reset" class="btn btn--order form__block-title">Очистить</button>
                 </div>
               </div>
@@ -511,7 +511,7 @@
         </div>
       </div>
     </section>
-    <section class="map section">
+    <section class="section map">
       <div id="mymap" class="mymap">
 
       </div>
@@ -572,29 +572,29 @@
 
 <div class="nav-points">
   <ul class="nav-points__list">
-    <li class="nav-points__item is-active">
-      <a href="#" class="nav-points__link" data-scroll-to="0"></a>
+    <li class="nav-points__item is-active" data-scroll-to="0">
+      <a href="#" class="nav-points__link"></a>
     </li>
-    <li class="nav-points__item">
-      <a href="#" class="nav-points__link" data-scroll-to="1"></a>
+    <li class="nav-points__item" data-scroll-to="1">
+      <a href="#" class="nav-points__link"></a>
     </li>
-    <li class="nav-points__item">
-      <a href="#" class="nav-points__link" data-scroll-to="2"></a>
+    <li class="nav-points__item" data-scroll-to="2">
+      <a href="#" class="nav-points__link"></a>
     </li>
-    <li class="nav-points__item">
-      <a href="#" class="nav-points__link" data-scroll-to="3"></a>
+    <li class="nav-points__item" data-scroll-to="3">
+      <a href="#" class="nav-points__link"></a>
     </li>
-    <li class="nav-points__item">
-      <a href="#" class="nav-points__link" data-scroll-to="4"></a>
+    <li class="nav-points__item" data-scroll-to="4">
+      <a href="#" class="nav-points__link"></a>
     </li>
-    <li class="nav-points__item">
-      <a href="#" class="nav-points__link" data-scroll-to="5"></a>
+    <li class="nav-points__item" data-scroll-to="5">
+      <a href="#" class="nav-points__link"></a>
     </li>
-    <li class="nav-points__item">
-      <a href="#" class="nav-points__link" data-scroll-to="6"></a>
+    <li class="nav-points__item" data-scroll-to="6">
+      <a href="#" class="nav-points__link"></a>
     </li>
-    <li class="nav-points__item">
-      <a href="#" class="nav-points__link" data-scroll-to="7"></a>
+    <li class="nav-points__item" data-scroll-to="7">
+      <a href="#" class="nav-points__link"></a>
     </li>
   </ul>
 </div>
