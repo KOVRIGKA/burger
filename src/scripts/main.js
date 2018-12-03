@@ -75,6 +75,8 @@ function mySlider() {
 
 mySlider();
 
+//выдвигашка профиля в команде
+
 function accordeonTeam(){
 
     const workers = document.querySelectorAll(".team-acco__item");
@@ -113,6 +115,8 @@ function accordeonTeam(){
 }
 
 accordeonTeam();
+
+//выдвигашка описания в меню
 
 function accordeonMenu(){
     const menuItems = document.querySelectorAll('.menu-acco__item');
@@ -180,3 +184,148 @@ function accordeonMenu(){
 }
 
 accordeonMenu();
+
+//читать отзыв
+
+const openButtons = document.querySelectorAll(".btn--review");
+const template = document.querySelector("#overlayTemplate").innerHTML;
+const overlay = createOverlay(template);
+const reviewList = document.querySelector(".reviews__list");
+
+reviewList.addEventListener("click", function(e) {
+    if (e.target.classList.contains('btn--review')) {
+        const head = e.target.parentNode.firstElementChild.textContent;
+        const text = e.target.parentNode.firstElementChild.nextElementSibling.textContent;
+        overlay.open();
+        overlay.setContent(head, text);
+    }
+});
+
+function createOverlay(template) {
+    let fragment = document.createElement('div');
+
+    fragment.innerHTML = template;
+
+    const overlayElement = fragment.querySelector(".overlay");
+    const headElement = fragment.querySelector(".details__head");
+    const textElement = fragment.querySelector(".details__text");
+    const closeElement = fragment.querySelector(".details__close");
+    
+    fragment = null;
+
+    overlayElement.addEventListener("click", e => {
+        if (e.target === overlayElement) {
+          closeElement.click();
+        }
+      });
+        
+        closeElement.addEventListener("click", () => {
+            event.preventDefault();    
+            document.body.removeChild(overlayElement);
+        });
+
+        return {
+            open() {
+                document.body.appendChild(overlayElement);
+            },
+            close() {
+                closeElement.click();
+            },
+            setContent(head, text) {
+                headElement.innerHTML = head;
+                textElement.innerHTML = text;
+            }
+        }
+}
+
+
+//карта
+
+ymaps.ready(init);
+
+var placemarks = [
+    {
+        latitude: 59.97,
+        longitude: 30.31,
+        hintContent: 'ул. Литераторов, д. 19',
+    },
+    {
+        latitude: 59.97,
+        longitude: 30.42,
+        hintContent: 'ул. Литераторов, д. 19',
+    },
+    {
+        latitude: 59.89,
+        longitude: 30.31,
+        hintContent: 'ул. Литераторов, д. 19',
+    },
+    {
+        latitude: 59.91,
+        longitude: 30.49,
+        hintContent: 'ул. Литераторов, д. 19',
+    },
+];
+
+function init(){
+    var map = new ymaps.Map('mymap', {
+        center: [59.94, 30.32],
+        zoom: 12,
+        controls: ['zoomControl'],
+        behaviors: ['drag']
+    });
+
+    placemarks.forEach(function(obj) {
+        var placemark = new ymaps.Placemark([obj.latitude, obj.longitude], {
+            hintContent: obj.hintContent,
+        },{
+            iconLayout:'default#image',
+            iconImageHref: './images/icons/map-marker.svg',
+            iconImageSize: [46, 57],
+            iconImageOffset: [-23, -27],
+        });
+
+        map.geoObjects.add(placemark);
+
+    });
+
+}
+
+// заказ
+
+
+
+function sendOrder() {
+	const myForm = document.querySelector('#myForm');
+    const sendButton = document.querySelector('#sendButton');
+
+	sendButton.addEventListener('click', function (event) {
+		event.preventDefault();
+
+		let url = myForm.getAttribute('action');
+		let method = myForm.getAttribute('method');
+		let formData = new FormData(myForm);
+
+		formData.append('name', myForm.elements.name.value);
+		formData.append('phone', myForm.elements.phone.value);
+		formData.append('comment', myForm.elements.comment.value);
+		formData.append('to', 'anastasiia.kovrighina@mail.ru');
+
+		const xhr = new XMLHttpRequest();
+		xhr.responseType = 'json';
+		xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+		xhr.send(formData);
+
+		const overlay = createOverlay(document.querySelector('#overlayTemplate').innerHTML);
+		xhr.addEventListener('load', () => {
+			overlay.open();
+			if (xhr.status <= 400) {
+				const message = xhr.response.message;
+				overlay.setContent('', message);
+			} else {
+				const message = 'УПС! Ошибочка! Попробуйте снова!';
+				overlay.setContent('', message);
+			}
+		});
+	});
+};
+sendOrder();
