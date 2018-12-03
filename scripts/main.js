@@ -312,13 +312,13 @@ function sendOrder() {
 
 		const xhr = new XMLHttpRequest();
 		xhr.responseType = 'json';
-		xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+		xhr.open(method, url);
 		xhr.send(formData);
 
 		const overlay = createOverlay(document.querySelector('#overlayTemplate').innerHTML);
 		xhr.addEventListener('load', () => {
 			overlay.open();
-			if (xhr.status <= 400) {
+			if (xhr.status === 200) {
 				const message = xhr.response.message;
 				overlay.setContent('', message);
 			} else {
@@ -329,3 +329,147 @@ function sendOrder() {
 	});
 };
 sendOrder();
+
+// one page scroll
+
+function onePageScroll() {
+    const wrapper = document.querySelector('.wrapper');
+    const content = wrapper.querySelector('.maincontent');
+    const pages = content.querySelectorAll('.section');
+    const points = document.querySelectorAll('.nav-points__item');
+    const dataScrollto = document.querySelectorAll('[data-scroll-to]');
+  
+    let isScroll = false;
+  
+    addNavigation();
+    wheel();
+    keyPush();
+  
+    function moveToPage(numPage) {
+      const position = `${numPage * -100}%`;
+  
+      if (isScroll) return;
+  
+      isScroll = true;
+  
+      addClass(pages);
+  
+      content.style.transform = `translateY(${position})`;
+  
+      setTimeout(() => {
+        isScroll = false;
+        addClass(points);
+      }, 1000);
+  
+      function addClass(arr) {
+        arr[numPage].classList.add('is-active');
+        for (const iterator of arr) {
+          if (iterator !== arr[numPage]) {
+            iterator.classList.remove('is-active');
+          }
+        }
+      }
+    }
+  
+    function addNavigation() {
+      for (const iterator of dataScrollto) {
+        iterator.addEventListener('click', e => {
+          e.preventDefault();
+          moveToPage(iterator.dataset.scrollTo);
+        });
+      }
+    }
+  
+    function wheel() {
+      document.addEventListener('wheel', e => {
+        const direct = e.deltaY > 0 ? 'up' : 'down';
+  
+        scrollToPage(direct);
+      });
+    }
+  
+    function definePage(arr) {
+      for (let i = 0; i < arr.length; i++) {
+        const element = arr[i];
+        if (element.classList.contains('is-active')) {
+          return {
+            elIndex: i,
+            elActive: element,
+            elNext: element.nextElementSibling,
+            elPrev: element.previousElementSibling
+          };
+        }
+      }
+    }
+  
+    function scrollToPage(direct) {
+      let page = definePage(pages);
+  
+      if (direct === 'up' && page.elNext) {
+        let numPage = page.elIndex + 1;
+        moveToPage(numPage);
+      }
+      if (direct === 'down' && page.elPrev) {
+        let numPage = page.elIndex - 1;
+        moveToPage(numPage);
+      }
+    }
+  
+    function keyPush() {
+      document.addEventListener('keydown', e => {
+        switch (e.keyCode) {
+          case 40:
+            scrollToPage('up');
+            break;
+          case 38:
+            scrollToPage('down');
+            break;
+        }
+      });
+    }
+  
+    if (isMobileDevice()) swipe();
+  
+    function swipe() {
+      let touchStartY = 0;
+      let touchEndY = 0;
+  
+      document.addEventListener(
+        'touchstart',
+        e => {
+          touchStartY = e.changedTouches[0].screenY;
+        },
+        false
+      );
+  
+      wrapper.addEventListener('touchmove', e => e.preventDefault());
+  
+      document.addEventListener(
+        'touchend',
+        e => {
+          touchEndY = e.changedTouches[0].screenY;
+          let direct = swipeDirect();
+          scrollToPage(direct);
+        },
+        false
+      );
+  
+      function swipeDirect() {
+        let dif = touchStartY - touchEndY;
+        if (dif > 100) {
+          return 'up';
+        } else if (dif < -100) {
+          return 'down';
+        }
+      }
+    }
+  
+    function isMobileDevice() {
+      return (
+        typeof window.orientation !== 'undefined' ||
+        navigator.userAgent.indexOf('IEMobile') !== -1
+      );
+    }
+  }
+  
+  onePageScroll();
